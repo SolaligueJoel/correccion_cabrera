@@ -13,9 +13,9 @@
     <p>Estamos buscando la familia codigo: {{codigo}}</p>
   
     <ul>
-    {% for familia in familias %}
-        <li>familia.{{nombre}}</li>
-        <li>familia.{{codigo}}</li>
+    {% for familiar in familia %}
+        <li>{{familiar.nombre}}</li>
+        <li>{{familiar.codigo}}</li>
     {% endfor %}
 
     </ul>
