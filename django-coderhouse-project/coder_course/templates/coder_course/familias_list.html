@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia_List</title>
+</head>
+<body>
+
+    <h1>Familias</h1>
+    <ul>
+        {% for familias in object_list %}
+
+            <li>
+                <p>NOMBRE:{{familias.nombre}}</p>
+                <p>
+                    <a href="{% url 'Detail' familias.id %}">Ver</a>
+                    <a href="{% url 'Edit' familias.id %}">Editar</a>
+                    <a href="{% url 'Delete' familias.id %}">Borrar</a>
+                </p>
+            </li>
+    
+        {% endfor %}
+</body>
+</html>

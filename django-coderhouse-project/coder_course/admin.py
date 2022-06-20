@@ -11,3 +11,4 @@ admin.site.register(Rubros)
 
 admin.site.register(Familias)
 
+admin.site.register(Avatar)
