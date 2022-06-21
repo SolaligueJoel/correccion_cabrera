@@ -31,5 +31,5 @@ class Familias(models.Model):
         return f'Codigo:{self.codigo} - Nombre:{self.nombre}'
 
 class Avatar(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    IMAGEN = models.ImageField(upload_to='avatares', null=True, blank=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_profile')
+    avatares = models.ImageField(upload_to='avatares', null=True, blank=True)
