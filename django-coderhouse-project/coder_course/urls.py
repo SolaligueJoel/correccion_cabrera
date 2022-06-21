@@ -3,6 +3,8 @@ from coder_course import views
 from django.contrib.auth.views import LogoutView
 
 
+
+
 urlpatterns = [
    
 
@@ -10,10 +12,10 @@ urlpatterns = [
     path('insumos',views.insumos, name="Insumos"),
     path('tareas',views.tareas, name="Tareas"),
     path('rubros',views.rubros, name="Rubros"),
-    path('familias',views.familias, name="Familias"),
+    path('familias/agregar',views.familias, name="Familias"),
     path('iniciar',views.iniciar, name="Iniciar"),
     #path('cargarFamilia',views.cargarfamilias, name="cargarFamilia"),
-    path('busquedaCodigo',views.busquedaCodigo, name="BusquedaCodigo"),
+    path('familias/busquedaCodigo',views.busquedaCodigo, name="BusquedaCodigo"),
     path('buscar/',views.buscar),
     path('leerFamilias',views.leerFamilias, name="leerFamilias"),
     path('familias/list',views.FamiliasList.as_view(), name ="List"),

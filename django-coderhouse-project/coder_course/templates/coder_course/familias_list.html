@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Familia_List</title>
-</head>
-<body>
+{% extends "coder_course/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
 
     <h1>Familias</h1>
     <ul>
@@ -18,9 +14,11 @@
                     <a href="{% url 'Detail' familias.id %}">Ver</a>
                     <a href="{% url 'Edit' familias.id %}">Editar</a>
                     <a href="{% url 'Delete' familias.id %}">Borrar</a>
+                
                 </p>
             </li>
     
         {% endfor %}
-</body>
-</html>
+        <a href="agregar">Agregar</a>
+        <a href="busquedaCodigo">Buscar</a>
+{% endblock %}
